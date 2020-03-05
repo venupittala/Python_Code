@@ -1,1 +1,349 @@
-dsnfdsklfmdsklfmdslk
+
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (master)
+$ git commit -m "adding first pic in local repo"
+[master 114033d] adding first pic in local repo
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 FB_IMG_1582050599586.jpg
+ create mode 100644 FB_IMG_1582210092068.jpg
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        FB_IMG_1582210100010.jpg
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (master)
+$ git add -A
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   FB_IMG_1582210100010.jpg
+
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (master)
+$ git commit -a -m "adding files"
+[master aacf729] adding files
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 FB_IMG_1582210100010.jpg
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (master)
+$ git log
+commit aacf729014400f86ff261c84682721dc498b1b4b (HEAD -> master)
+Author: venupittala <venu1979@gmail.com>
+Date:   Thu Mar 5 22:35:20 2020 +0530
+
+    adding files
+
+commit 114033d078c56e751ce82ac5a195c8cd3856886c
+Author: venupittala <venu1979@gmail.com>
+Date:   Thu Mar 5 22:31:42 2020 +0530
+
+    adding first pic in local repo
+
+commit a386896caf422ac00b579b1e2826daa583a4e014
+Author: venupittala <venu1979@gmail.com>
+Date:   Thu Mar 5 22:21:18 2020 +0530
+
+    adding python pic in local repo
+
+commit 84ee35186d82196c8fd4264d659ea020cb6f3545 (origin/master)
+Author: venupittala <51739215+venupittala@users.noreply.github.com>
+Date:   Sun Mar 1 06:37:26 2020 +0000
+
+    Create Python1
+
+commit 12fea693ace4a8bb10cea645c31bef10c313a5fc
+Author: venupittala <51739215+venupittala@users.noreply.github.com>
+Date:   Sun Mar 1 06:27:16 2020 +0000
+
+    Initial commit
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (master)
+$ git branch firstbranch
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (master)
+$ git chekout firstbranch
+git: 'chekout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (master)
+$ git checkout firstbranch
+Switched to branch 'firstbranch'
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (firstbranch)
+$ git add edu4.txt
+fatal: pathspec 'edu4.txt' did not match any files
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (firstbranch)
+$ git status
+On branch firstbranch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        edu4.txt.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (firstbranch)
+$ git add edu4.txt
+fatal: pathspec 'edu4.txt' did not match any files
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (firstbranch)
+$ git commit -A
+error: unknown switch `A'
+usage: git commit [<options>] [--] <pathspec>...
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup <commit>      use autosquash formatted message to fixup specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    -s, --signoff         add Signed-off-by:
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <mode>      how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --ahead-behind        compute full ahead/behind values
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (firstbranch)
+$ git commit -m "making changes"
+On branch firstbranch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        edu4.txt.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (firstbranch)
+$ ls
+edu4.txt.txt              FB_IMG_1582210092068.jpg  README.md
+FB_IMG_1582050599586.jpg  FB_IMG_1582210100010.jpg
+FB_IMG_1582136673360.jpg  Python1
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (firstbranch)
+$ git checkout master
+Switched to branch 'master'
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (master)
+$ ls
+edu4.txt.txt              FB_IMG_1582210092068.jpg  README.md
+FB_IMG_1582050599586.jpg  FB_IMG_1582210100010.jpg
+FB_IMG_1582136673360.jpg  Python1
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (master)
+$ git add edu4.txt
+fatal: pathspec 'edu4.txt' did not match any files
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        edu4.txt.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (master)
+$ git merge firstbranch
+Already up to date.
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (master)
+$ ls
+edu4.txt.txt              FB_IMG_1582210092068.jpg  README.md
+FB_IMG_1582050599586.jpg  FB_IMG_1582210100010.jpg
+FB_IMG_1582136673360.jpg  Python1
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (master)
+$ git checkout firstbranch
+Switched to branch 'firstbranch'
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (firstbranch)
+$ git init
+Reinitialized existing Git repository in C:/Git_Project/.git/
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (firstbranch)
+$ git commit -a -m "modifying test"
+On branch firstbranch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        edu4.txt.txt
+        test.txt.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (firstbranch)
+$ cat edu4.txt.txt
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (firstbranch)
+$ git checkout master
+Switched to branch 'master'
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (master)
+$ cat edu4.txt.txt
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (master)
+$ git checkout firstbranch
+Switched to branch 'firstbranch'
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (firstbranch)
+$ git add -A
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (firstbranch)
+$ git commit -a -m "adding endu5"
+[firstbranch af80b34] adding endu5
+ 3 files changed, 1 insertion(+)
+ create mode 100644 edu4.txt.txt
+ create mode 100644 endu5.txt
+ create mode 100644 test.txt.txt
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (firstbranch)
+$ git checkout master
+Switched to branch 'master'
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (master)
+$ ls
+FB_IMG_1582050599586.jpg  FB_IMG_1582210092068.jpg  Python1
+FB_IMG_1582136673360.jpg  FB_IMG_1582210100010.jpg  README.md
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (master)
+$ git checkout firstbranch
+Switched to branch 'firstbranch'
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (firstbranch)
+$ ls
+edu4.txt.txt              FB_IMG_1582136673360.jpg  Python1
+endu5.txt                 FB_IMG_1582210092068.jpg  README.md
+FB_IMG_1582050599586.jpg  FB_IMG_1582210100010.jpg  test.txt.txt
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (firstbranch)
+$ git rebase master
+Current branch firstbranch is up to date.
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (firstbranch)
+$ git checkout master
+Switched to branch 'master'
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (master)
+$ git rebase firstbranch
+First, rewinding head to replay your work on top of it...
+Fast-forwarded master to firstbranch.
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (master)
+$ ls
+edu4.txt.txt              FB_IMG_1582136673360.jpg  Python1
+endu5.txt                 FB_IMG_1582210092068.jpg  README.md
+FB_IMG_1582050599586.jpg  FB_IMG_1582210100010.jpg  test.txt.txt
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (master)
+$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/Admin/.ssh/id_rsa): y
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in y
+Your public key has been saved in y.pub
+The key fingerprint is:
+SHA256:96U8bZcLC0dqLiE1w/Br0ZouU6UAdDU/ukNQmumU3vM Admin@DESKTOP-F66OG1N
+The key's randomart image is:
++---[RSA 3072]----+
+|    .. ..+       |
+|     ...* o      |
+|      .B+ .o     |
+|      +.oB.o.    |
+|       oS=@  ..  |
+|       ..X+oo+  .|
+|        =o.E=oo..|
+|       o o+ ooo..|
+|        o .. . . |
++----[SHA256]-----+
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (master)
+$ cat /c/Users/Admin/.ssh/id_rsa.pub
+cat: /c/Users/Admin/.ssh/id_rsa.pub: No such file or directory
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (master)
+$ cat y.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC50xjD1urp46MnzfiVnVY035MVoJcftC4SW90C7UyFqjFb/6RH4hapRz7LX/7UQ/o46mK4ixf2qFVGpkkU6jWiPQbvTnNjl/esj/vYZuFScb1CbAS9Ma6Z9xecTP2BDL66Zf5oGp0uIANmjBuWuOcLrIAsAJ7aIYSoMQ50QryIuN80RBX9OVtt3SInOFv8BufckDTEA3izrRry5Qvkc/DldmSxqrLsqSETvRZTgMGLxvpBVP/SdBIbKclkVOcZqdcGVjl+i4vxmFT/RcFCLHks2fpysb3W3HL/PDZtc+5nz4D11kHkePTD+DiZXAR9rcDLtqwwHP1AqTnXEswZ8heybRwXgyVTvI097Zwkng6L3Ro9xHUWelL+oUa+EjQWg4VXSXH23ljfL47Ktwb8ytCLobMtNBxSCbLvF9IxerRaIKyF3Mly9Ka8XE+2q+WZU20vfDkOGXL2F5+gVDWvywwj9iz5vZigtRke1zZZRsahRw8dZFHM3/P1tjSSRPnK6o8= Admin@DESKTOP-F66OG1N
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (master)
+$ ssh -T git@github.com
+The authenticity of host 'github.com (13.234.210.38)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? y
+Please type 'yes', 'no' or the fingerprint: yes
+Warning: Permanently added 'github.com,13.234.210.38' (RSA) to the list of known hosts.
+git@github.com: Permission denied (publickey).
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (master)
+$ git push origin firstbranch
+Logon failed, use ctrl+c to cancel basic credential prompt.
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/venupittala/Python_Code.git/'
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (master)
+$ git push origin firstbranch
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (14/14), 153.32 KiB | 7.67 MiB/s, done.
+Total 14 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), done.
+remote:
+remote: Create a pull request for 'firstbranch' on GitHub by visiting:
+remote:      https://github.com/venupittala/Python_Code/pull/new/firstbranch
+remote:
+To https://github.com/venupittala/Python_Code.git
+ * [new branch]      firstbranch -> firstbranch
+
+Admin@DESKTOP-F66OG1N MINGW64 /c/Git_Project (master)
+$dsnfdsklfmdsklfmdslk
